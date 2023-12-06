@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3</title>
+</head>
+<body>
+    <h1>欢迎来到第三关！新的挑战即将来临！</h1>
+    <h2>解出这段md5，进入对应的txt文件得到flag，例如md5解密出的明文为123，则进入123.txt</h2>
+    <h2>md5:fe9c5c0b3d5f35e672886b114bd8ea8c</h2>
+    <script>console.log("进入four.html");</script>
+    <script>
+        document.oncontextmenu=function() {
+           alert("右键被禁用");
+           return false;
+          };
+         document.onkeydown = function(e) {
+            e = window.event || e;
+            var k = e.keyCode;
+            //屏蔽ctrl+u，F12键
+            if ((e.ctrlKey == true && k == 85) || k == 123) {
+              if (k == 85)
+                alert("Ctrl+U被禁用!");
+              else 
+                alert("F12被禁用!");
+              e.keyCode = 0;
+              e.returnValue = false;
+              e.cancelBubble = true;
+              return false;
+            }
+         }
+        </script>
+</body>
+</html>
